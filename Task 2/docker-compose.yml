@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  yolov5:
+    build: .
+    volumes:
+      - .:/Task2
+      - ../../Tasks/2/Reading-Meters-Data/:/mnt/source
+      - ./result/:/mnt/result
+    ports:
+      - 8888:8888
+
+volumes:
+  Reading-Meters-Data:
+  result:
+
+# run docker compose: docker compose up --build
