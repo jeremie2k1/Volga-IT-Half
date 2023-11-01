@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    volumes:
+      - .:/Task3
+      - ./data/:/mnt/source
+      - ./result/:/mnt/result
+    ports:
+      - 8888:8888
+
+volumes:
+  data:
+  result:
